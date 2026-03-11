@@ -16,11 +16,11 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <div className="top"><span className="logo">lamadmin</span></div>
+            <div className="top"><span className="logo">J-Admin</span></div>
             <hr />
             <div className="center">
                 <ul>
-                    <p className="title">MAIN</p>
+                    <p className="title">MAIN</p>   
                     <li>
                         <DashboardIcon className="icon" />
                         <span>Dashboard</span>
