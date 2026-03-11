@@ -19,8 +19,8 @@ const Home = () => {
                     <Widget type={"balance"} />
                 </div>
                 <div className="charts">
-                    <Featured/>
-                    <Chart/>
+                    <Featured />
+                    <Chart />
                 </div>
             </div>
         </div>
