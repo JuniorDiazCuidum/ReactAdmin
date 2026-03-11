@@ -3,9 +3,9 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined"; 
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined"; 
-import ListOutlinedIcon from "@mui/icons-material/ListOutlined"; 
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 
 
 const Navbar = () => {
@@ -14,33 +14,33 @@ const Navbar = () => {
             <div className="wrapper">
                 <div className="search">
                     <input type="text" placeholder="Search..." />
-                    <SearchOutlinedIcon/>
+                    <SearchOutlinedIcon />
                 </div>
                 <div className="items">
                     <div className="item">
-                        <LanguageOutlinedIcon className="icon"/>
+                        <LanguageOutlinedIcon className="icon" />
                         English
                     </div>
                     <div className="item">
-                        <DarkModeOutlinedIcon className="icon"/>
+                        <DarkModeOutlinedIcon className="icon" />
                     </div>
                     <div className="item">
-                        <FullscreenExitOutlinedIcon className="icon"/>
+                        <FullscreenExitOutlinedIcon className="icon" />
                     </div>
                     <div className="item">
-                        <NotificationsNoneOutlinedIcon className="icon"/>
+                        <NotificationsNoneOutlinedIcon className="icon" />
                         <div className="counter">1</div>
                     </div>
                     <div className="item">
-                        <ChatBubbleOutlineOutlinedIcon className="icon"/>
+                        <ChatBubbleOutlineOutlinedIcon className="icon" />
                         <div className="counter">2</div>
                     </div>
                     <div className="item">
-                        <ListOutlinedIcon className="icon"/>
+                        <ListOutlinedIcon className="icon" />
                     </div>
                     <div className="item">
-                        <img src="https://img.somake.ai/cdn-cgi/image/width=800,quality=80,format=auto,fit=scale-down/tools/examples/face-generator_gallery_1763099237_4902.jpg" alt="" 
-                        className="avatar"/>
+                        <img src="https://img.somake.ai/cdn-cgi/image/width=800,quality=80,format=auto,fit=scale-down/tools/examples/face-generator_gallery_1763099237_4902.jpg" alt=""
+                            className="avatar" />
                     </div>
                 </div>
             </div>

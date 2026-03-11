@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     height: 50px;
     border-bottom: 0.5px solid rgb(231, 228, 228);
     display: flex;
@@ -6,51 +6,51 @@
     font-size: 14px;
     color: #555;
 
-    .wrapper{
+    .wrapper {
         width: 100%;
         padding: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .search{
+        .search {
             display: flex;
             align-items: center;
             border: 0.5px solid lightgray;
             padding: 3px;
 
-            input{
+            input {
                 border: none;
                 outline: none;
                 background: transparent;
 
-                &::placeholder{
+                &::placeholder {
                     font-size: 12px;
                 }
             }
         }
 
-        .items{
+        .items {
             display: flex;
             align-items: center;
 
-            .item{
+            .item {
                 display: flex;
                 align-items: center;
                 margin-right: 20px;
                 position: relative;
 
-                .icon{
+                .icon {
                     font-size: 20px;
                 }
 
-                .avatar{
+                .avatar {
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
                 }
 
-                .counter{
+                .counter {
                     width: 15px;
                     height: 15px;
                     background-color: red;
