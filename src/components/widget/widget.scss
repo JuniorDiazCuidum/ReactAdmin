@@ -26,9 +26,9 @@
         }
 
         .link {
+            width: max-content;
             font-size: 12px;
             border-bottom: 1px solid gray;
-            width: max-content;
         }
 
         .percentage {
@@ -43,6 +43,14 @@
                 color: red;
             }
         }
+    }
+
+    .icon{
+        font-size: 18px;
+        padding: 5px;
+        background-color: rgba(128, 0, 128, 0.541);
+        border-radius: 5px;
+        align-items: flex-end;
     }
 
 }
