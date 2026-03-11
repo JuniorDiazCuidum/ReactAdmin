@@ -13,8 +13,30 @@
         flex-direction: column;
         justify-content: space-between;
 
-
+        .title{
+            font-weight: bold;
+            font-size: 14px;
+            color: rgb(160, 160, 160);
+        }
         
+        .counter{
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .link{
+            font-size: 12px;
+            border-bottom: 1px solid gray;
+            width: max-content;
+        }
+        .percentage{
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            &.positive{
+                color: green;
+            }
+        }
     }
 
 }
