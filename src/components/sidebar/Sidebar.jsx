@@ -22,7 +22,7 @@ const Sidebar = () => {
                 <ul>
                     <p className="title">MAIN</p>
                     <li>
-                        <DashboardIcon/>
+                        <DashboardIcon className="icon" />
                         <span>Dashboard</span>
                     </li>
                     <p className="title">LISTS</p>
@@ -75,9 +75,12 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </div>
-            <div className="botton">color options</div>
+            <div className="bottom">
+                <div className="colorOption"></div>
+                <div className="colorOption"></div>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;
