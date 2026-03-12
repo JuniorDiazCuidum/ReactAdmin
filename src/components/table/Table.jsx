@@ -37,7 +37,7 @@ const List = () => {
             customer: "Jane Doe",
             date: "1 March",
             amount: 35,
-            method: "Online Payment",
+            method: "Cash on Delivery",
             status: "Pending",
         },
         {
@@ -47,8 +47,18 @@ const List = () => {
             customer: "Harold Carol",
             date: "1 March",
             amount: 920,
-            method: "Online Payment",
+            method: "Online",
             status: "Approved",
+        },
+        {
+            id: 2342355,
+            product: "ASUS ROG Strix",
+            img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+            customer: "Kenny Smith",
+            date: "1 March",
+            amount: 2000,
+            method: "Online",
+            status: "Pending",
         },
     ];
     return <TableContainer component={Paper} className="table">
