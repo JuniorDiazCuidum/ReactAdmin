@@ -23,7 +23,7 @@ const List = () => {
         {
             id: 2235235,
             product: "Playstation 5",
-            img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+            img: "https://m.media-amazon.com/images/I/51tztLywcbL._AC_SX522_.jpg",
             customer: "Michael Doe",
             date: "1 March",
             amount: 900,
@@ -33,7 +33,7 @@ const List = () => {
         {
             id: 2342353,
             product: "Redragon S101",
-            img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+            img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Jane Doe",
             date: "1 March",
             amount: 35,
@@ -43,7 +43,7 @@ const List = () => {
         {
             id: 2357741,
             product: "Razer Blade 15",
-            img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+            img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Harold Carol",
             date: "1 March",
             amount: 920,
@@ -53,7 +53,7 @@ const List = () => {
         {
             id: 2342355,
             product: "ASUS ROG Strix",
-            img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+            img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Kenny Smith",
             date: "1 March",
             amount: 2000,
@@ -80,7 +80,13 @@ const List = () => {
                         <TableCell component="th" scope="row">
                             {row.id}
                         </TableCell>
-                        <TableCell className="right">{row.product}</TableCell>
+                        <TableCell className="right">{row.id}</TableCell>
+                        <TableCell className="right">
+                            <div className="cellWrapper">
+                                <img src={row.img} alt="" className="image" />
+                                {row.product}
+                            </div>
+                        </TableCell>
                         <TableCell className="right">{row.customer}</TableCell>
                         <TableCell className="right">{row.date}</TableCell>
                         <TableCell className="right">{row.amount}</TableCell>
