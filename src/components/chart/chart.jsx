@@ -1,13 +1,16 @@
 import "./chart.scss";
-import { AreaChart, Area, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import {
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
+    Legend, ResponsiveContainer
+} from "recharts";
 
 const data = [
-    { name: "January", Total: 1200 },
-    { name: "February", Total: 2100 },
-    { name: "March", Total: 800 },
-    { name: "April", Total: 1600 },
-    { name: "May", Total: 900 },
-    { name: "June", Total: 1700 },
+    { name: "January", Revenue: 1200, Expenses: 900 },
+    { name: "February", Revenue: 2100, Expenses: 1400 },
+    { name: "March", Revenue: 800, Expenses: 600 },
+    { name: "April", Revenue: 1600, Expenses: 1100 },
+    { name: "May", Revenue: 900, Expenses: 700 },
+    { name: "June", Revenue: 1700, Expenses: 1300 },
 ];
 
 const Chart = ({aspect, title}) => {
@@ -15,19 +18,15 @@ const Chart = ({aspect, title}) => {
         <div className="chart">
             <div className="title">{title}</div>
             <ResponsiveContainer width="100%" aspect={aspect}>
-                <AreaChart width={730} height={250} data={data}
-                    margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                    <defs>
-                        <linearGradient id="Total" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-                            <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-                        </linearGradient>
-                    </defs>
-                    <XAxis dataKey="name" stroke="gray" />
+                <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
+                    <XAxis dataKey="name" stroke="gray" />
+                    <YAxis stroke="gray" />
                     <Tooltip />
-                    <Area type="monotone" dataKey="Total" stroke="#8884d8" fillOpacity={1} fill="url(#Total)" />
-                </AreaChart>
+                    <Legend />
+                    <Bar dataKey="Revenue" fill="#8884d8" radius={[4, 4, 0, 0]} />
+                    <Bar dataKey="Expenses" fill="#82ca9d" radius={[4, 4, 0, 0]} />
+                </BarChart>
             </ResponsiveContainer>
         </div>
     )

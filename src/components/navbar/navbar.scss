@@ -66,6 +66,55 @@
                     right: -5px;
                 }
             }
+
+            .chatItem {
+                position: relative;
+
+                .chatPopup {
+                    position: absolute;
+                    top: calc(100% + 14px);
+                    right: 0;
+                    width: 240px;
+                    background-color: white;
+                    border: 0.5px solid #e0e0e0;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+                    z-index: 999;
+                    overflow: hidden;
+
+                    .chatPopupHeader {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 14px;
+                        border-bottom: 0.5px solid #e0e0e0;
+                        font-weight: 600;
+                        font-size: 13px;
+                        color: #333;
+
+                        .chatSettingsIcon {
+                            font-size: 18px;
+                            color: #888;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #555;
+                            }
+                        }
+                    }
+
+                    .chatPopupBody {
+                        padding: 24px 14px;
+                        text-align: center;
+
+                        p {
+                            font-size: 12px;
+                            color: #999;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }

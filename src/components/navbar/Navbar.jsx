@@ -1,4 +1,5 @@
 import "./navbar.scss";
+import { useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -6,9 +7,12 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 
 const Navbar = () => {
+    const [chatOpen, setChatOpen] = useState(false);
+
     return (
         <div className="navbar">
             <div className="wrapper">
@@ -31,9 +35,24 @@ const Navbar = () => {
                         <NotificationsNoneOutlinedIcon className="icon" />
                         <div className="counter">1</div>
                     </div>
-                    <div className="item">
-                        <ChatBubbleOutlineOutlinedIcon className="icon" />
+                    <div className="item chatItem">
+                        <ChatBubbleOutlineOutlinedIcon
+                            className="icon"
+                            onClick={() => setChatOpen((prev) => !prev)}
+                            style={{ cursor: "pointer" }}
+                        />
                         <div className="counter">2</div>
+                        {chatOpen && (
+                            <div className="chatPopup">
+                                <div className="chatPopupHeader">
+                                    <span>Mensajes</span>
+                                    <SettingsOutlinedIcon className="chatSettingsIcon" />
+                                </div>
+                                <div className="chatPopupBody">
+                                    <p>No has recibido ningún mensaje</p>
+                                </div>
+                            </div>
+                        )}
                     </div>
                     <div className="item">
                         <ListOutlinedIcon className="icon" />
