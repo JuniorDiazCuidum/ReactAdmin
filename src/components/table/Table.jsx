@@ -23,7 +23,7 @@ const List = () => {
         {
             id: 2235235,
             product: "Playstation 5",
-            img: "https://m.media-amazon.com/images/I/51tztLywcbL._AC_SX522_.jpg",
+            img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Michael Doe",
             date: "1 March",
             amount: 900,
@@ -80,18 +80,19 @@ const List = () => {
                         <TableCell component="th" scope="row">
                             {row.id}
                         </TableCell>
-                        <TableCell className="right">{row.id}</TableCell>
                         <TableCell className="right">
                             <div className="cellWrapper">
                                 <img src={row.img} alt="" className="image" />
                                 {row.product}
                             </div>
                         </TableCell>
-                        <TableCell className="right">{row.customer}</TableCell>
-                        <TableCell className="right">{row.date}</TableCell>
-                        <TableCell className="right">{row.amount}</TableCell>
-                        <TableCell className="right">{row.method}</TableCell>
-                        <TableCell className="right">{row.status}</TableCell>
+                        <TableCell className="tableCell">{row.customer}</TableCell>
+                        <TableCell className="tableCell">{row.date}</TableCell>
+                        <TableCell className="tableCell">{row.amount}</TableCell>
+                        <TableCell className="tableCell">{row.method}</TableCell>
+                        <TableCell className="tableCell">
+                            <span className={`status ${row.status}`}>{row.status}</span>
+                        </TableCell>
                     </TableRow>
                 ))}
             </TableBody>
