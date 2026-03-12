@@ -37,19 +37,24 @@
   }
 
   .cellWithStatus {
-    padding: 5px;
+    padding: 3px 8px;
     border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
 
     &.active {
-      background-color: rgba(0, 128, 0, 0.05);
+      background-color: rgba(0, 128, 0, 0.15);
       color: green;
     }
     &.pending {
-      background-color: rgba(255, 217, 0, 0.05);
+      background-color: rgba(255, 217, 0, 0.15);
       color: goldenrod;
     }
     &.passive {
-      background-color: rgba(255, 0, 0, 0.05);
+      background-color: rgba(255, 0, 0, 0.15);
       color: crimson;
     }
   }
