@@ -11,6 +11,23 @@
     align-items: center;
     justify-content: space-between;
 
+    &.decoratedTitle {
+      justify-content: center;
+      gap: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #444;
+
+      .titleDeco {
+        color: #8884d8;
+        font-size: 13px;
+        opacity: 0.75;
+        letter-spacing: 4px;
+      }
+    }
+
     .link{
       text-decoration: none;
       color: green;

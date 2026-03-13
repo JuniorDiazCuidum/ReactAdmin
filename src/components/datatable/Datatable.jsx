@@ -24,11 +24,10 @@ const Datatable = () => {
 
     return (
         <div className="datatable">
-            <div className="datatableTitle">
-                Add New User
-                <Link to="/users/new" style={{ textDecoration: "none" }} className="link">
-                    Add New
-                </Link>
+            <div className="datatableTitle decoratedTitle">
+                <span className="titleDeco">✦ ✦ ✦</span>
+                Users
+                <span className="titleDeco">✦ ✦ ✦</span>
             </div>
             <DataGrid
                 className="datagrid"

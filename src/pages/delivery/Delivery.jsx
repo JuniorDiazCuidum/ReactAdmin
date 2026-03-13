@@ -27,8 +27,10 @@ const Delivery = () => {
             <div className="listContainer">
                 <Navbar />
                 <div className="datatable">
-                    <div className="datatableTitle">
+                    <div className="datatableTitle decoratedTitle">
+                        <span className="titleDeco">✦ ✦ ✦</span>
                         Deliveries
+                        <span className="titleDeco">✦ ✦ ✦</span>
                     </div>
                     <DataGrid
                         className="datagrid"
