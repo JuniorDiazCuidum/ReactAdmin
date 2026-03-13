@@ -7,6 +7,22 @@
     }
 }
 
+/* Override datatableTitle when used on Products page */
+.datatableTitle.productsTitle {
+    justify-content: center;
+    gap: 14px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    .titleDeco {
+        color: #8884d8;
+        font-size: 13px;
+        opacity: 0.75;
+        letter-spacing: 4px;
+    }
+}
+
 .productsWrapper {
     padding: 24px 28px;
 

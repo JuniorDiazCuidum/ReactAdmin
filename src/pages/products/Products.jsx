@@ -45,8 +45,10 @@ const Products = () => {
             <div className="listContainer">
                 <Navbar />
                 <div className="datatable">
-                    <div className="datatableTitle">
+                    <div className="datatableTitle productsTitle">
+                        <span className="titleDeco">✦ ✦ ✦</span>
                         Products
+                        <span className="titleDeco">✦ ✦ ✦</span>
                     </div>
                     <DataGrid
                         className="datagrid"
