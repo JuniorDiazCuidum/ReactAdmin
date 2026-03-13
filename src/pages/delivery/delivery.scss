@@ -1,0 +1,82 @@
+.list {
+    display: flex;
+    width: 100%;
+
+    .listContainer {
+        flex: 6;
+    }
+}
+
+.deliveryCellAction {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .deliveryViewButton {
+        padding: 2px 8px;
+        border-radius: 5px;
+        color: darkblue;
+        border: 1px dotted rgba(0, 0, 139, 0.596);
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+
+        &:hover {
+            background-color: rgba(0, 0, 139, 0.1);
+            transform: scale(1.08);
+        }
+    }
+
+    .deliveryDeleteButton {
+        padding: 2px 8px;
+        border-radius: 5px;
+        color: crimson;
+        border: 1px dotted rgba(220, 20, 60, 0.6);
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+
+        &:hover {
+            background-color: rgba(220, 20, 60, 0.1);
+            transform: scale(1.08);
+        }
+    }
+}
+
+.cellWithStatus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1;
+
+    &.delivered {
+        background-color: rgba(0, 128, 0, 0.15);
+        color: green;
+    }
+
+    &.in-transit {
+        background-color: rgba(63, 81, 181, 0.15);
+        color: #3f51b5;
+    }
+
+    &.out-for-delivery {
+        background-color: rgba(0, 180, 200, 0.15);
+        color: #0097a7;
+    }
+
+    &.delayed {
+        background-color: rgba(255, 165, 0, 0.15);
+        color: darkorange;
+    }
+
+    &.pending {
+        background-color: rgba(255, 217, 0, 0.15);
+        color: goldenrod;
+    }
+
+    &.returned {
+        background-color: rgba(128, 0, 128, 0.15);
+        color: purple;
+    }
+}

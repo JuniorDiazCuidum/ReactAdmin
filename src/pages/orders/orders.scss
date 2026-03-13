@@ -1,0 +1,46 @@
+.list {
+    display: flex;
+    width: 100%;
+    
+
+    .listContainer {
+        flex: 6;
+        
+    }
+}
+
+// Order-specific status badge colors
+.cellWithStatus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1;
+
+    &.delivered {
+        background-color: rgba(0, 128, 0, 0.15);
+        color: green;
+    }
+
+    &.processing {
+        background-color: rgba(255, 165, 0, 0.15);
+        color: darkorange;
+    }
+
+    &.shipped {
+        background-color: rgba(63, 81, 181, 0.15);
+        color: #3f51b5;
+    }
+
+    &.cancelled {
+        background-color: rgba(220, 20, 60, 0.15);
+        color: crimson;
+    }
+
+    &.refunded {
+        background-color: rgba(128, 0, 128, 0.15);
+        color: purple;
+    }
+}

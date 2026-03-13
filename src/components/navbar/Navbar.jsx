@@ -33,7 +33,7 @@ const Navbar = () => {
                     </div>
                     <div className="item">
                         <NotificationsNoneOutlinedIcon className="icon" />
-                        <div className="counter">1</div>
+                        <div className="counter">0</div>
                     </div>
                     <div className="item chatItem">
                         <ChatBubbleOutlineOutlinedIcon
@@ -41,7 +41,7 @@ const Navbar = () => {
                             onClick={() => setChatOpen((prev) => !prev)}
                             style={{ cursor: "pointer" }}
                         />
-                        <div className="counter">2</div>
+                        <div className="counter">0</div>
                         {chatOpen && (
                             <div className="chatPopup">
                                 <div className="chatPopupHeader">
