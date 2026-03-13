@@ -1,0 +1,158 @@
+.logs-page {
+    display: flex;
+    width: 100%;
+
+    .logsContainer {
+        flex: 6;
+
+        .logsContent {
+            padding: 24px 28px;
+
+            .logsHeader {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 16px;
+                margin-bottom: 20px;
+
+                .logsHeaderLeft {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .logsHeaderIcon {
+                        font-size: 28px;
+                        color: #8884d8;
+                    }
+
+                    h2 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #444;
+                        margin: 0;
+                    }
+
+                    .logCount {
+                        font-size: 12px;
+                        color: #aaa;
+                        background-color: #f0eeff;
+                        padding: 3px 10px;
+                        border-radius: 20px;
+                    }
+                }
+
+                .logsControls {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    flex-wrap: wrap;
+
+                    .logsSearch {
+                        padding: 7px 14px;
+                        border: 1px solid #e0e0e0;
+                        border-radius: 8px;
+                        font-size: 13px;
+                        outline: none;
+                        width: 220px;
+                        transition: border-color 0.2s;
+
+                        &:focus {
+                            border-color: #8884d8;
+                        }
+                    }
+
+                    .levelFilters {
+                        display: flex;
+                        gap: 6px;
+
+                        .levelBtn {
+                            padding: 5px 14px;
+                            border-radius: 20px;
+                            border: 1px solid #e0e0e0;
+                            font-size: 12px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            background-color: white;
+                            text-transform: capitalize;
+                            transition: all 0.15s ease;
+
+                            &.all    { color: #666; &.active, &:hover { background-color: #f0eeff; border-color: #8884d8; color: #8884d8; } }
+                            &.info   { color: #0097a7; &.active, &:hover { background-color: rgba(0,180,200,0.12); border-color: #0097a7; } }
+                            &.warning{ color: darkorange; &.active, &:hover { background-color: rgba(255,140,0,0.12); border-color: darkorange; } }
+                            &.error  { color: crimson; &.active, &:hover { background-color: rgba(220,20,60,0.1); border-color: crimson; } }
+                        }
+                    }
+                }
+            }
+
+            .logsTable {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+                overflow: hidden;
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    th {
+                        text-align: left;
+                        font-size: 11px;
+                        font-weight: 700;
+                        color: #bbb;
+                        text-transform: uppercase;
+                        padding: 12px 14px;
+                        border-bottom: 1px solid #f0f0f0;
+                        background-color: #fafafa;
+                    }
+
+                    .logRow {
+                        border-bottom: 1px solid #f7f7f7;
+                        transition: background-color 0.15s;
+
+                        &:hover { background-color: #faf9ff; }
+                        &:last-child { border-bottom: none; }
+
+                        &.error   { border-left: 3px solid rgba(220,20,60,0.4); }
+                        &.warning { border-left: 3px solid rgba(255,140,0,0.4); }
+                        &.info    { border-left: 3px solid transparent; }
+                    }
+
+                    td {
+                        padding: 10px 14px;
+                        font-size: 13px;
+                        vertical-align: middle;
+
+                        &.logId      { color: #bbb; font-size: 12px; width: 40px; }
+                        &.logTime    { color: #888; font-size: 12px; font-family: monospace; white-space: nowrap; }
+                        &.logUser    { color: #555; font-weight: 500; width: 130px; }
+                        &.logMessage { color: #333; }
+
+                        &.noResults {
+                            text-align: center;
+                            color: #aaa;
+                            padding: 30px;
+                        }
+
+                        .logBadge {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 2px 10px;
+                            border-radius: 20px;
+                            font-size: 11px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+
+                            &.info    { background-color: rgba(0,180,200,0.12);  color: #0097a7; }
+                            &.warning { background-color: rgba(255,140,0,0.12);  color: darkorange; }
+                            &.error   { background-color: rgba(220,20,60,0.12);  color: crimson; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+.settings-page {
+    display: flex;
+    width: 100%;
+
+    .settingsContainer {
+        flex: 6;
+
+        .settingsContent {
+            padding: 24px 28px;
+            max-width: 720px;
+
+            .settingsTitle {
+                font-size: 20px;
+                font-weight: 700;
+                color: #444;
+                margin-bottom: 24px;
+            }
+
+            /* ── Card ── */
+            .settingsCard {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+                margin-bottom: 20px;
+                overflow: hidden;
+
+                .cardHeader {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 14px 20px;
+                    border-bottom: 1px solid #f4f4f4;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #444;
+
+                    .cardIcon {
+                        font-size: 20px;
+                        color: #8884d8;
+                    }
+                }
+
+                .cardBody {
+                    padding: 18px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+
+                    /* Form rows (text / select inputs) */
+                    .formRow {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+
+                        label {
+                            min-width: 170px;
+                            font-size: 13px;
+                            color: #666;
+                            font-weight: 500;
+                        }
+
+                        input[type="text"],
+                        input[type="email"],
+                        input[type="password"],
+                        select {
+                            flex: 1;
+                            padding: 8px 12px;
+                            border: 1px solid #e0e0e0;
+                            border-radius: 8px;
+                            font-size: 13px;
+                            outline: none;
+                            transition: border-color 0.2s;
+                            background-color: white;
+
+                            &:focus {
+                                border-color: #8884d8;
+                            }
+                        }
+                    }
+
+                    /* Settings rows (toggles) */
+                    .settingsRow {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 6px 0;
+                        border-bottom: 1px solid #f7f7f7;
+
+                        &:last-of-type {
+                            border-bottom: none;
+                        }
+
+                        .rowLeft {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            .rowIcon {
+                                font-size: 20px;
+                                color: #8884d8;
+                            }
+
+                            .rowLabel {
+                                font-size: 13px;
+                                font-weight: 600;
+                                color: #444;
+                            }
+
+                            .rowDesc {
+                                font-size: 12px;
+                                color: #aaa;
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+
+                    /* Action row */
+                    .cardActions {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        gap: 14px;
+                        margin-top: 4px;
+
+                        .savedMsg {
+                            font-size: 13px;
+                            color: #4caf50;
+                            font-weight: 500;
+                        }
+
+                        .errorMsg {
+                            font-size: 13px;
+                            color: crimson;
+                            font-weight: 500;
+                        }
+
+                        .saveBtn {
+                            padding: 8px 22px;
+                            background-color: #6439ff;
+                            color: white;
+                            border: none;
+                            border-radius: 8px;
+                            font-size: 13px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: background-color 0.2s;
+
+                            &:hover {
+                                background-color: #4f2ecc;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* ── Toggle Switch ── */
+            .toggle {
+                position: relative;
+                display: inline-block;
+                width: 44px;
+                height: 24px;
+                flex-shrink: 0;
+
+                input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+
+                    &:checked + .slider {
+                        background-color: #6439ff;
+                    }
+
+                    &:checked + .slider::before {
+                        transform: translateX(20px);
+                    }
+                }
+
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    background-color: #ccc;
+                    border-radius: 24px;
+                    transition: background-color 0.2s;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 18px;
+                        width: 18px;
+                        left: 3px;
+                        bottom: 3px;
+                        background-color: white;
+                        border-radius: 50%;
+                        transition: transform 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}

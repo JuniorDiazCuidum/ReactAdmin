@@ -1,0 +1,162 @@
+.list {
+    display: flex;
+    width: 100%;
+
+    .listContainer {
+        flex: 6;
+    }
+}
+
+.productsWrapper {
+    padding: 24px 28px;
+
+    .productsTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #444;
+
+        .titleDeco {
+            color: #8884d8;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    }
+
+    // Minimalist DataGrid overrides
+    .MuiDataGrid-root {
+        border: none !important;
+        font-size: 13px;
+    }
+
+    .MuiDataGrid-columnHeaders {
+        background-color: #f8f7ff;
+        border-bottom: 2px solid #e8e4ff;
+        border-radius: 8px 8px 0 0;
+
+        .MuiDataGrid-columnHeaderTitle {
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #888;
+        }
+    }
+
+    .MuiDataGrid-row {
+        border-bottom: 1px solid #f5f5f5;
+        transition: background-color 0.15s ease;
+
+        &:hover {
+            background-color: #faf9ff !important;
+        }
+    }
+
+    .MuiDataGrid-cell {
+        border-bottom: none !important;
+    }
+
+    .MuiDataGrid-footerContainer {
+        border-top: 1px solid #eee;
+    }
+}
+
+.qtyControl {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .qtyBtn {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: none;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.18s ease, transform 0.15s ease;
+
+        &.minus {
+            background-color: rgba(220, 20, 60, 0.12);
+            color: crimson;
+
+            &:hover:not(:disabled) {
+                background-color: rgba(220, 20, 60, 0.25);
+                transform: scale(1.1);
+            }
+
+            &:disabled {
+                opacity: 0.35;
+                cursor: not-allowed;
+            }
+        }
+
+        &.plus {
+            background-color: rgba(100, 57, 255, 0.12);
+            color: #6439ff;
+
+            &:hover:not(:disabled) {
+                background-color: rgba(100, 57, 255, 0.25);
+                transform: scale(1.1);
+            }
+
+            &:disabled {
+                opacity: 0.35;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .qtyValue {
+        min-width: 22px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: #444;
+    }
+}
+
+.cellWithStatus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    &.top-popular {
+        background-color: rgba(255, 193, 7, 0.18);
+        color: #e6a800;
+    }
+
+    &.available {
+        background-color: rgba(0, 128, 0, 0.15);
+        color: green;
+    }
+
+    &.low-stock {
+        background-color: rgba(255, 140, 0, 0.15);
+        color: darkorange;
+    }
+
+    &.out-of-stock {
+        background-color: rgba(220, 20, 60, 0.13);
+        color: crimson;
+    }
+
+    &.discontinued {
+        background-color: rgba(100, 100, 100, 0.13);
+        color: #666;
+    }
+}

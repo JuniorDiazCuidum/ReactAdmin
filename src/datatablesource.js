@@ -108,6 +108,54 @@ export const userRows = [
     },
 ];
 
+export const productColumns = [
+    { field: "id", headerName: "ID", width: 60 },
+    {
+        field: "name",
+        headerName: "Product",
+        width: 220,
+        renderCell: (params) => (
+            <div className="cellWithImg">
+                <img className="cellImg" src={params.row.img} alt="product" />
+                {params.row.name}
+            </div>
+        ),
+    },
+    { field: "category", headerName: "Category", width: 130 },
+    { field: "price", headerName: "Price", width: 90,
+        renderCell: (params) => <span>${params.row.price}</span>
+    },
+    { field: "stock", headerName: "Stock", width: 80 },
+    {
+        field: "status",
+        headerName: "Status",
+        width: 150,
+        renderCell: (params) => (
+            <div className={`cellWithStatus ${params.row.status.replace(/\s+/g, "-").toLowerCase()}`}>
+                {params.row.status}
+            </div>
+        ),
+    },
+];
+
+export const productRows = [
+    { id: 1,  name: "Acer Nitro 5",       category: "Laptops",      price: 785,  stock: 34,  status: "top-popular",   img: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 2,  name: "PlayStation 5",      category: "Consoles",     price: 900,  stock: 8,   status: "low-stock",     img: "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 3,  name: "Redragon S101",      category: "Accessories",  price: 35,   stock: 200, status: "available",     img: "https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 4,  name: "Razer Blade 15",     category: "Laptops",      price: 920,  stock: 0,   status: "out-of-stock",  img: "https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 5,  name: "ASUS ROG Strix",     category: "Laptops",      price: 2000, stock: 5,   status: "low-stock",     img: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 6,  name: "Samsung QLED TV",    category: "TVs",          price: 1450, stock: 12,  status: "available",     img: "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 7,  name: "iPhone 14 Pro",      category: "Phones",       price: 1099, stock: 47,  status: "top-popular",   img: "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 8,  name: "Dell XPS 13",        category: "Laptops",      price: 1350, stock: 0,   status: "out-of-stock",  img: "https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 9,  name: "AirPods Pro",        category: "Accessories",  price: 249,  stock: 73,  status: "available",     img: "https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 10, name: "Nintendo Switch",    category: "Consoles",     price: 299,  stock: 22,  status: "available",     img: "https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 11, name: "Sony WH-1000XM5",   category: "Accessories",  price: 350,  stock: 0,   status: "discontinued",  img: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 12, name: "LG UltraWide 34\"", category: "Monitors",     price: 680,  stock: 9,   status: "low-stock",     img: "https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 13, name: "Logitech MX Master",category: "Accessories",  price: 99,   stock: 150, status: "available",     img: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 14, name: "iPad Pro 12.9\"",   category: "Tablets",      price: 1199, stock: 31,  status: "top-popular",   img: "https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+    { id: 15, name: "Kindle Paperwhite", category: "Tablets",      price: 139,  stock: 0,   status: "discontinued",  img: "https://images.pexels.com/photos/3178938/pexels-photo-3178938.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
+];
+
 export const orderColumns = [
     { field: "id", headerName: "Tracking ID", width: 120 },
     {

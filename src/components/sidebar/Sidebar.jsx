@@ -60,27 +60,37 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
+          <Link to="/stats" style={{ textDecoration: "none" }}>
+            <li className={isActive("/stats") ? "active" : ""}>
+              <InsertChartIcon className="icon" />
+              <span>Stats</span>
+            </li>
+          </Link>
+          <Link to="/notifications" style={{ textDecoration: "none" }}>
+            <li className={isActive("/notifications") ? "active" : ""}>
+              <NotificationsNoneIcon className="icon" />
+              <span>Notifications</span>
+            </li>
+          </Link>
           <p className="title">SERVICE</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
-          </li>
+          <Link to="/system-health" style={{ textDecoration: "none" }}>
+            <li className={isActive("/system-health") ? "active" : ""}>
+              <SettingsSystemDaydreamOutlinedIcon className="icon" />
+              <span>System Health</span>
+            </li>
+          </Link>
+          <Link to="/logs" style={{ textDecoration: "none" }}>
+            <li className={isActive("/logs") ? "active" : ""}>
+              <PsychologyOutlinedIcon className="icon" />
+              <span>Logs</span>
+            </li>
+          </Link>
+          <Link to="/settings" style={{ textDecoration: "none" }}>
+            <li className={isActive("/settings") ? "active" : ""}>
+              <SettingsApplicationsIcon className="icon" />
+              <span>Settings</span>
+            </li>
+          </Link>
           <p className="title">USER</p>
           <li>
             <AccountCircleOutlinedIcon className="icon" />

@@ -8,6 +8,9 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import { notificationsData } from "../../notificationsData";
+
+const unreadCount = notificationsData.filter((n) => !n.read).length;
 
 
 const Navbar = () => {
@@ -33,7 +36,7 @@ const Navbar = () => {
                     </div>
                     <div className="item">
                         <NotificationsNoneOutlinedIcon className="icon" />
-                        <div className="counter">0</div>
+                        <div className="counter">{unreadCount}</div>
                     </div>
                     <div className="item chatItem">
                         <ChatBubbleOutlineOutlinedIcon
