@@ -11,6 +11,7 @@ import Notifications from "./pages/notifications/Notifications";
 import SystemHealth from "./pages/systemhealth/SystemHealth";
 import Logs from "./pages/logs/Logs";
 import Settings from "./pages/settings/Settings";
+import Profile from "./pages/profile/Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
@@ -63,6 +64,9 @@ function App() {
             </Route>
             <Route path="settings">
               <Route index element={<Settings />} />
+            </Route>
+            <Route path="profile">
+              <Route index element={<Profile />} />
             </Route>
           </Route>
         </Routes>

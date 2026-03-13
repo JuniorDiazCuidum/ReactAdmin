@@ -11,11 +11,19 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Sidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isActive = (path) => location.pathname === path;
+  const [showLogout, setShowLogout] = useState(false);
+
+  const handleLogoutConfirm = () => {
+    setShowLogout(false);
+    navigate("/");
+  };
 
   return (
     <div className="sidebar">
@@ -92,16 +100,33 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="title">USER</p>
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
-          <li>
+          <Link to="/profile" style={{ textDecoration: "none" }}>
+            <li className={isActive("/profile") ? "active" : ""}>
+              <AccountCircleOutlinedIcon className="icon" />
+              <span>Profile</span>
+            </li>
+          </Link>
+          <li className="logoutItem" onClick={() => setShowLogout(true)}>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
         </ul>
       </div>
+
+      {/* ── Logout confirmation modal ── */}
+      {showLogout && (
+        <div className="logoutOverlay" onClick={() => setShowLogout(false)}>
+          <div className="logoutModal" onClick={(e) => e.stopPropagation()}>
+            <ExitToAppIcon className="logoutModalIcon" />
+            <h3>¿Cerrar sesión?</h3>
+            <p>¿Estás seguro que quieres cerrar sesión?</p>
+            <div className="logoutModalActions">
+              <button className="logoutNo"  onClick={() => setShowLogout(false)}>No, quedarse</button>
+              <button className="logoutYes" onClick={handleLogoutConfirm}>Sí, salir</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

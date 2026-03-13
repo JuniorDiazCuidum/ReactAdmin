@@ -76,6 +76,96 @@
                     margin-left: 10px;
                 }
             }
+
+            li.logoutItem {
+                &:hover {
+                    background-color: #fff0f0;
+                    .icon { color: crimson; }
+                    span  { color: crimson; }
+                }
+            }
+        }
+    }
+
+    /* ── Logout overlay & modal ── */
+    .logoutOverlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        animation: fadeIn 0.15s ease;
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .logoutModal {
+            background: white;
+            border-radius: 14px;
+            padding: 36px 40px;
+            width: 340px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            animation: slideUp 0.18s ease;
+
+            @keyframes slideUp {
+                from { transform: translateY(20px); opacity: 0; }
+                to   { transform: translateY(0);    opacity: 1; }
+            }
+
+            .logoutModalIcon {
+                font-size: 48px;
+                color: #e53935;
+                margin-bottom: 12px;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #333;
+                margin: 0 0 8px 0;
+            }
+
+            p {
+                font-size: 13px;
+                color: #888;
+                margin: 0 0 24px 0;
+                line-height: 1.5;
+            }
+
+            .logoutModalActions {
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+
+                button {
+                    padding: 9px 22px;
+                    border-radius: 8px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    border: none;
+                    transition: background-color 0.2s;
+                }
+
+                .logoutNo {
+                    background-color: #f0eeff;
+                    color: #6439ff;
+                    &:hover { background-color: #dcd5ff; }
+                }
+
+                .logoutYes {
+                    background-color: #e53935;
+                    color: white;
+                    &:hover { background-color: #b71c1c; }
+                }
+            }
         }
     }
 
